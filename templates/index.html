@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>What are your interests?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static',filename='styles/main.css') }}"> -->
+</head>
+<body style="background: linear-gradient(to right, #83C5BE, #EDF6F9, #FFDDD2);" class="text-center">
+    <h1 style="font-size: 56px;" class="container justify-content-center text-center p-4 my-4"><strong>What are your interests?</strong></h1>
+    
+    <form style="background-color: rgba(226, 149, 120, .75); border: solid #006D77 1px;"class="d-inline-flex flex-column justify-content-center text-center px-5 py-3 mb-3 rounded" action="" method="POST">
+    {{ interests.hidden_tag() }}
+    
+    <div style="font-size: 36px;"  class="d-inline-flex justify-content-center mx-2"><strong>Enter your name</strong></div>
+    <br />
+    <div  class="d-flex m-3 justify-content-around">
+        <div style="font-weight: bold;" class="p-3" id="first">
+            <div>{{ first_name.label }}</div>
+            <div>{{ first_name() }}</div>
+        </div>
+        
+        <div style="font-weight: bold;" class="p-3" id="last">
+            <div>{{ last_name.label }}</div>
+            <div>{{ last_name() }}</div>
+        </div>
+    </div>
+    
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ color.label }}</div>
+        <div class="field">{{ color() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ candy.label }}</div>
+        <div class="field">{{ candy() }}</div>
+    </div>
+    
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ sport_team.label }}</div>
+        <div class="field">{{ sport_team() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ snack.label }}</div>
+        <div class="field">{{ snack() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ movie.label }}</div>
+        <div class="field">{{ movie() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ visit.label }}</div>
+        <div class="field">{{ visit() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ food.label }}</div>
+        <div class="field">{{ food() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ soda.label }}</div>
+        <div class="field">{{ soda() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ animal.label }}</div>
+        <div class="field">{{animal()}}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ holiday.label }}</div>
+        <div class="field">{{ holiday() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ season.label }}</div>
+        <div class="field">{{ season() }}</div>
+    </div>
+
+    <div style="border: solid #006D77 2px; font-weight: bold;" class="m-5 py-4 rounded">
+        <div class="mb-2">{{ caffeine.label }}</div>
+        <div class="field">{{ caffeine() }}</div>
+    </div>
+
+    <div style="font-size: 18px;" class="m-5 py-4 rounded">{{ submit() }}</div>
+    
+    </form>
+</body>
+</html>
